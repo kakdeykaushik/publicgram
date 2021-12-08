@@ -42,6 +42,9 @@
       </div>
       <h2>{{ object.title }}</h2>
       <p class="article-content">{{ object.content }}</p>
+      {% if not object.is_visible %}
+        <p class="text-danger">This is NSFW content. Not visible to rest of the world and would be deleted soon</p>
+      {% endif %}
     </div>
   </article>
 {% endblock content %}
